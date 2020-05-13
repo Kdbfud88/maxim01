@@ -963,7 +963,7 @@ while True:
 			command_list += ','.join(command[1]) + '\n'     #!설정확인
 			command_list += ','.join(command[2]) + '\n'     #!채널확인
 			command_list += ','.join(command[3]) + ' [채널명]\n'     #!채널이동
-			command_list += ','.join(command[4]) + '\n'     #!나와라
+			command_list += ','.join(command[4]) + '\n'     #!소환
 			command_list += ','.join(command[5]) + '\n'     #!불러오기
 			command_list += ','.join(command[6]) + '\n'     #!초기화
 			command_list += ','.join(command[7]) + '\n'     #!명치
@@ -975,7 +975,7 @@ while True:
 			command_list += ','.join(command[12]) + ' [아이디]\n'     #!정산
 			command_list += ','.join(command[13]) + ' 또는 ' + ','.join(command[14]) + ' 0000, 00:00\n'     #!보스일괄
 			command_list += ','.join(command[14]) + '\n'     #!q
-			command_list += ','.join(command[15]) + ' [할말]\n'     #!f
+			command_list += ','.join(command[15]) + ' [할말]\n'     #!v
 			command_list += ','.join(command[16]) + '\n'     #!리젠
 			command_list += ','.join(command[17]) + '\n'     #!현재시간
 			command_list += ','.join(command[22]) + '\n'     #!킬초기화
@@ -1534,7 +1534,7 @@ while True:
 		id = msg.author.id #id라는 변수에는 메시지를 보낸사람의 ID를 담습니다.
 		
 		if chflg == 0 :
-			if msg.content == "!나와라":
+			if msg.content == "!소환":
 				channel = int(msg.channel.id) #channel이라는 변수에는 메시지를 받은 채널의 ID를 담습니다
 				if basicSetting[7] == "":
 					inidata_textCH = repo.get_contents("test_setting.ini")
